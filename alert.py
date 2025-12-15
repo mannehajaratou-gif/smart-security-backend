@@ -2,8 +2,8 @@ import smtplib
 from email.mime.text import MIMEText
 
 def send_alert(email_to, subject, message):
-    email_from = "mannehajaratou@gmail.com"
-    app_password = "zteauuipuxdxeyno"
+    email_from = os.getenv ("mxxxxxxxxxxx@gmail.com")
+    app_password = os.getenv ("xxxxxxxx")
 
     msg = MIMEText(message)
     msg['Subject'] = subject
@@ -20,4 +20,4 @@ def send_alert(email_to, subject, message):
         print("Error sending alert:", e)
 
 # test
-send_alert("ajaratoumanneh@gmail.com", "Test Alert", "This is a test message")
+#send_alert("xxxxxxxxxxx@gmail.com", "Test Alert", "This is a test message")
