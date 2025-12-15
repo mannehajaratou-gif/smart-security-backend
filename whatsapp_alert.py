@@ -1,9 +1,11 @@
 # whatsapp_alert.py
 from twilio.rest import Client
 
-ACCOUNT_SID = "AC2132c20624f01b4d8cd2565f88a5551f"
-AUTH_TOKEN = "90916f9c0731bdab30f6dfe27a173156"
-TWILIO_WHATSAPP = "whatsapp:+14155238886"  # Twilio Sandbox number
+ACCOUNT_SID = os.getenv("TWILIO_API_KEY")
+AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+TWILIO_WHATSAPP = os.getenv("WHATSAPP_PHONE_ID")   # Twilio Sandbox number
+
+
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
